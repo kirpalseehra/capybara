@@ -22,6 +22,7 @@ describe 'Testing a correct path for sparta registration' do
       @sparta_demosite.fill_in_email_field('example-one@hotmail.com')
       @sparta_demosite.fill_in_skills_field('Skills include: HTML, CSS, JavaScript, SQL, Ruby')
       @sparta_demosite.fill_in_phone_field('079me')
+      @sparta_demosite.fill_in_linked_url_field('example.linkedIn.com')
     
       sleep 10
     end

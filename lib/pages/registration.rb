@@ -21,6 +21,8 @@ class Registration
   EMAIL_FIELD_ID = 'inputemailaddress'
   SKILLS_FIELD_ID = 'exampleFormControlTextarea1'
   PHONE_FIELD_ID = 'exampleFormControlInput1'
+  LINKED_URL_FIELD_XPATH = '/html/body/div/form/div[17]/div/input'
+
 
   def visit_registration_page
     visit(SPARTA_REG_URL)
@@ -86,7 +88,11 @@ class Registration
     fill_in(PHONE_FIELD_ID, :with => phone)
   end
 
-  
+  def fill_in_linked_url_field(linked)
+    find(:xpath, LINKED_URL_FIELD_XPATH).set(linked)
+  end
+
+
 
 
 end

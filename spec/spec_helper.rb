@@ -12,5 +12,5 @@ end
 Capybara.configure do |config|
  config.ignore_hidden_elements = false
  config.default_max_wait_time = 10
- config.default_drive = :chrome
+ config.default_driver = :chrome
 end

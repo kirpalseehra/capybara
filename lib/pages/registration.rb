@@ -20,6 +20,7 @@ class Registration
   POSTCODE_FIELD_ID = 'inputPostcode'
   EMAIL_FIELD_ID = 'inputemailaddress'
   SKILLS_FIELD_ID = 'exampleFormControlTextarea1'
+  PHONE_FIELD_ID = 'exampleFormControlInput1'
 
   def visit_registration_page
     visit(SPARTA_REG_URL)
@@ -80,5 +81,12 @@ class Registration
   def fill_in_skills_field(skills)
     fill_in(SKILLS_FIELD_ID, :with => skills)
   end
+
+  def fill_in_phone_field(phone)
+    fill_in(PHONE_FIELD_ID, :with => phone)
+  end
+
+  
+
 
 end

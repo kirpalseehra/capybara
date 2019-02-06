@@ -17,6 +17,9 @@ class Registration
   CITY_FIELD_ID = 'inputCity'
   UNIVERSITY_DROPDOWN_ID = 'inputUni'
   COUNTY_DROPDOWN_ID = 'inputCounty'
+  POSTCODE_FIELD_ID = 'inputPostcode'
+  EMAIL_FIELD_ID = 'inputemailaddress'
+  SKILLS_FIELD_ID = 'exampleFormControlTextarea1'
 
   def visit_registration_page
     visit(SPARTA_REG_URL)
@@ -66,5 +69,16 @@ class Registration
     select('Bristol', :from => COUNTY_DROPDOWN_ID)
   end
 
+  def fill_in_postcode_field(postcode)
+    fill_in(POSTCODE_FIELD_ID, :with => postcode)
+  end
+
+  def fill_in_email_field(email)
+    fill_in(EMAIL_FIELD_ID, :with => email)
+  end
+
+  def fill_in_skills_field(skills)
+    fill_in(SKILLS_FIELD_ID, :with => skills)
+  end
 
 end

@@ -12,6 +12,7 @@ describe 'Testing a correct path for sparta registration' do
       @sparta_demosite.fill_in_date_field('07/02/2019')
       @sparta_demosite.click_gender_button
       @sparta_demosite.select_age_field('25')
+      @sparta_demosite.fill_in_degree_field('Computer Science')
 
       sleep 10
     end

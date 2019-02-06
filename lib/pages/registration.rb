@@ -10,7 +10,8 @@ class Registration
   LAST_NAME_FIELD_ID = 'lastName'
   AGE_FIELD_XPATH = '/html/body/div/form/div[3]/div/input'
   DATE_FIELD_NAME = 'dob'
-  GENDER_FIELD_RADIO = '/html/body/div/form/div[5]/label'
+  GENDER_RADIO_XPATH = '/html/body/div/form/div[5]/label'
+  DEGREE_FIELD_XPATH = '/html/body/div/form/div[7]/div/input'
   
 
   def visit_registration_page
@@ -34,7 +35,11 @@ class Registration
   end
 
   def click_gender_button
-    find(:xpath, GENDER_FIELD_RADIO).click
+    find(:xpath, GENDER_RADIO_XPATH).click
+  end
+
+  def fill_in_degree_field(degree)
+    find(:xpath, DEGREE_FIELD_XPATH).set(degree)
   end
 
 end

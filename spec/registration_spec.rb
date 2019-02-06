@@ -13,7 +13,12 @@ describe 'Testing a correct path for sparta registration' do
       @sparta_demosite.click_gender_button
       @sparta_demosite.select_age_field('25')
       @sparta_demosite.fill_in_degree_field('Computer Science')
-
+      @sparta_demosite.fill_in_address_field('Sparta')
+      @sparta_demosite.fill_in_address_two_field('Global')
+      @sparta_demosite.fill_in_city_field('Seven Kings')
+      @sparta_demosite.select_university_dropdown
+      @sparta_demosite.select_county_dropdown
+    
       sleep 10
     end
 

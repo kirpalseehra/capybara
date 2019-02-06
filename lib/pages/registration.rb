@@ -12,7 +12,11 @@ class Registration
   DATE_FIELD_NAME = 'dob'
   GENDER_RADIO_XPATH = '/html/body/div/form/div[5]/label'
   DEGREE_FIELD_XPATH = '/html/body/div/form/div[7]/div/input'
-  
+  ADDRESS_FIELD_ID = 'inputAddress'
+  ADDRESS_TWO_FIELD_ID = 'inputAddress2'
+  CITY_FIELD_ID = 'inputCity'
+  UNIVERSITY_DROPDOWN_ID = 'inputUni'
+  COUNTY_DROPDOWN_ID = 'inputCounty'
 
   def visit_registration_page
     visit(SPARTA_REG_URL)
@@ -41,5 +45,26 @@ class Registration
   def fill_in_degree_field(degree)
     find(:xpath, DEGREE_FIELD_XPATH).set(degree)
   end
+
+  def fill_in_address_field(add)
+    fill_in(ADDRESS_FIELD_ID, :with => add)
+  end
+
+  def fill_in_address_two_field(add2)
+    fill_in(ADDRESS_TWO_FIELD_ID, :with => add2)
+  end
+
+  def fill_in_city_field(city)
+    fill_in(CITY_FIELD_ID, :with => city)
+  end
+
+  def select_university_dropdown
+    select('University of Oxford', :from => UNIVERSITY_DROPDOWN_ID)
+  end
+
+  def select_county_dropdown
+    select('Bristol', :from => COUNTY_DROPDOWN_ID)
+  end
+
 
 end

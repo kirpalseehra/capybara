@@ -9,6 +9,9 @@ describe 'Testing a correct path for sparta registration' do
       @sparta_demosite.visit_registration_page
       @sparta_demosite.fill_in_firstname_field('Kirpal')
       @sparta_demosite.fill_in_lastname_field('Seehra')
+      @sparta_demosite.fill_in_date_field('07/02/2019')
+      @sparta_demosite.click_gender_button
+      @sparta_demosite.select_age_field('25')
 
       sleep 10
     end

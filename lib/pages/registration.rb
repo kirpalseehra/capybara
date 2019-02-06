@@ -22,6 +22,8 @@ class Registration
   SKILLS_FIELD_ID = 'exampleFormControlTextarea1'
   PHONE_FIELD_ID = 'exampleFormControlInput1'
   LINKED_URL_FIELD_XPATH = '/html/body/div/form/div[17]/div/input'
+  STREAM_RADIO_XPATH = '/html/body/div/form/div[20]/div[2]/label'
+  TERMS_CHECKBOX_ID = 'terms'
 
 
   def visit_registration_page
@@ -92,7 +94,13 @@ class Registration
     find(:xpath, LINKED_URL_FIELD_XPATH).set(linked)
   end
 
+  def click_stream_button
+    find(:xpath, STREAM_RADIO_XPATH).click
+  end
 
+  def terms_checkbox 
+    check(TERMS_CHECKBOX_ID)
+  end
 
 
 end

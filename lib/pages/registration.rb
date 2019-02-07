@@ -24,6 +24,8 @@ class Registration
   LINKED_URL_FIELD_XPATH = '/html/body/div/form/div[17]/div/input'
   STREAM_RADIO_XPATH = '/html/body/div/form/div[20]/div[2]/label'
   TERMS_CHECKBOX_ID = 'terms'
+  SLIDER_CLASS = 'slider'
+  SIGN_IN_BUTTON_XPATH = '/html/body/div/form/button'
 
 
   def visit_registration_page
@@ -102,5 +104,11 @@ class Registration
     check(TERMS_CHECKBOX_ID)
   end
 
+  def slider(slide)
+    find(SLIDER_CLASS).drag_to(slide)
+  end
 
+  def click_sign_in_button
+    find(:xpath, SIGN_IN_BUTTON_XPATH).click
+  end
 end

@@ -25,7 +25,9 @@ describe 'Testing a correct path for sparta registration' do
       @sparta_demosite.fill_in_linked_url_field('example.linkedIn.com')
       @sparta_demosite.click_stream_button
       @sparta_demosite.terms_checkbox
-      
+      @sparta_demosite.slider(81)
+      @sparta_demosite.click_sign_in_button
+
       sleep 10
     end
 

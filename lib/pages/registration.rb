@@ -22,6 +22,7 @@ class Registration
   SKILLS_FIELD_ID = 'exampleFormControlTextarea1'
   PHONE_FIELD_ID = 'exampleFormControlInput1'
   LINKED_URL_FIELD_XPATH = '/html/body/div/form/div[17]/div/input'
+  UPLOAD_CV_FIELD_XPATH = '/html/body/div/form/div[18]/div/input'
   STREAM_RADIO_XPATH = '/html/body/div/form/div[20]/div[2]/label'
   TERMS_CHECKBOX_ID = 'terms'
   SLIDER_CLASS = 'slider'
@@ -94,6 +95,10 @@ class Registration
 
   def fill_in_linked_url_field(linked)
     find(:xpath, LINKED_URL_FIELD_XPATH).set(linked)
+  end
+
+  def upload_cv
+    find(:xpath, UPLOAD_CV_FIELD_XPATH).click
   end
 
   def click_stream_button

@@ -104,9 +104,9 @@ class Registration
     check(TERMS_CHECKBOX_ID)
   end
 
-  def slider(slide)
-    find(SLIDER_CLASS).drag_to(slide)
-  end
+  # def slider(slide)
+  #   find(SLIDER_CLASS).drag_to(slide)
+  # end
 
   def click_sign_in_button
     find(:xpath, SIGN_IN_BUTTON_XPATH).click
